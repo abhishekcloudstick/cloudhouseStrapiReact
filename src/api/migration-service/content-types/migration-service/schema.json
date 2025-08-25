@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "migration_services",
+  "info": {
+    "singularName": "migration-service",
+    "pluralName": "migration-services",
+    "displayName": "MigrationService"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

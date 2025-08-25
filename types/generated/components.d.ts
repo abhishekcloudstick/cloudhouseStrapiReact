@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CustomAdditionalSecurityMeasures
+  extends Struct.ComponentSchema {
+  collectionName: 'components_custom_additional_security_measures';
+  info: {
+    displayName: 'additionalSecurityMeasures';
+  };
+  attributes: {
+    item: Schema.Attribute.Text;
+  };
+}
+
 export interface CustomAdvancedReporting extends Struct.ComponentSchema {
   collectionName: 'components_custom_advanced_reportings';
   info: {
@@ -96,6 +107,16 @@ export interface CustomServerCareFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomServerhardening extends Struct.ComponentSchema {
+  collectionName: 'components_custom_serverhardenings';
+  info: {
+    displayName: 'serverhardening';
+  };
+  attributes: {
+    item: Schema.Attribute.String;
+  };
+}
+
 export interface CustomTags extends Struct.ComponentSchema {
   collectionName: 'components_custom_tags';
   info: {
@@ -119,6 +140,7 @@ export interface CustomTechUsed extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'custom.additional-security-measures': CustomAdditionalSecurityMeasures;
       'custom.advanced-reporting': CustomAdvancedReporting;
       'custom.capabilities': CustomCapabilities;
       'custom.devopsfeatures': CustomDevopsfeatures;
@@ -128,6 +150,7 @@ declare module '@strapi/strapi' {
       'custom.requirements': CustomRequirements;
       'custom.seo': CustomSeo;
       'custom.server-care-feature': CustomServerCareFeature;
+      'custom.serverhardening': CustomServerhardening;
       'custom.tags': CustomTags;
       'custom.tech-used': CustomTechUsed;
     }

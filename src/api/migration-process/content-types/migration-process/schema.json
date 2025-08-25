@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "migration_processes",
+  "info": {
+    "singularName": "migration-process",
+    "pluralName": "migration-processes",
+    "displayName": "MigrationProcess"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "step": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

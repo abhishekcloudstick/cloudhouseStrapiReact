@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "server_hardening_security_measures",
+  "info": {
+    "singularName": "server-hardening-security-measure",
+    "pluralName": "server-hardening-security-measures",
+    "displayName": "serverHardeningSecurityMeasure"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "component": "custom.additional-security-measures",
+      "repeatable": true
+    }
+  }
+}

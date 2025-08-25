@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_development_services",
+  "info": {
+    "singularName": "product-development-service",
+    "pluralName": "product-development-services",
+    "displayName": " ProductDevelopmentService"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "number": {
+      "type": "string"
+    },
+    "titleDevelopmentProcess": {
+      "type": "string"
+    },
+    "descriptionDevelopmentProcess": {
+      "type": "text"
+    }
+  }
+}

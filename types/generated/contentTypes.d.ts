@@ -662,6 +662,129 @@ export interface ApiHiringHiring extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMalwareQandAMalwareQandA
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'malware_qand_as';
+  info: {
+    displayName: 'malwareQandA';
+    pluralName: 'malware-qand-as';
+    singularName: 'malware-qand-a';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::malware-qand-a.malware-qand-a'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    question: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMalwareRemovalProcessMalwareRemovalProcess
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'malware_removal_processes';
+  info: {
+    displayName: 'MalwareRemovalProcess';
+    pluralName: 'malware-removal-processes';
+    singularName: 'malware-removal-process';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::malware-removal-process.malware-removal-process'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMigrationProcessMigrationProcess
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'migration_processes';
+  info: {
+    displayName: 'MigrationProcess';
+    pluralName: 'migration-processes';
+    singularName: 'migration-process';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::migration-process.migration-process'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    step: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMigrationServiceMigrationService
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'migration_services';
+  info: {
+    displayName: 'MigrationService';
+    pluralName: 'migration-services';
+    singularName: 'migration-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::migration-service.migration-service'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPostPost extends Struct.CollectionTypeSchema {
   collectionName: 'posts';
   info: {
@@ -686,6 +809,40 @@ export interface ApiPostPost extends Struct.CollectionTypeSchema {
     seo: Schema.Attribute.Component<'custom.seo', true>;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductDevelopmentServiceProductDevelopmentService
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'product_development_services';
+  info: {
+    displayName: ' ProductDevelopmentService';
+    pluralName: 'product-development-services';
+    singularName: 'product-development-service';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    descriptionDevelopmentProcess: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product-development-service.product-development-service'
+    > &
+      Schema.Attribute.Private;
+    number: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    titleDevelopmentProcess: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -764,6 +921,69 @@ export interface ApiServerCareServerCare extends Struct.CollectionTypeSchema {
     price: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     Scare: Schema.Attribute.Component<'custom.server-care-feature', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServerHardeningSecurityMeasureServerHardeningSecurityMeasure
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'server_hardening_security_measures';
+  info: {
+    displayName: 'serverHardeningSecurityMeasure';
+    pluralName: 'server-hardening-security-measures';
+    singularName: 'server-hardening-security-measure';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    items: Schema.Attribute.Component<
+      'custom.additional-security-measures',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::server-hardening-security-measure.server-hardening-security-measure'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiServerhardeningServerhardening
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'serverhardenings';
+  info: {
+    displayName: 'serverhardening';
+    pluralName: 'serverhardenings';
+    singularName: 'serverhardening';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    items: Schema.Attribute.Component<'custom.serverhardening', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::serverhardening.serverhardening'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -884,6 +1104,7 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String;
+    seo: Schema.Attribute.Component<'custom.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1439,9 +1660,16 @@ declare module '@strapi/strapi' {
       'api::erp-module.erp-module': ApiErpModuleErpModule;
       'api::f-and-q.f-and-q': ApiFAndQFAndQ;
       'api::hiring.hiring': ApiHiringHiring;
+      'api::malware-qand-a.malware-qand-a': ApiMalwareQandAMalwareQandA;
+      'api::malware-removal-process.malware-removal-process': ApiMalwareRemovalProcessMalwareRemovalProcess;
+      'api::migration-process.migration-process': ApiMigrationProcessMigrationProcess;
+      'api::migration-service.migration-service': ApiMigrationServiceMigrationService;
       'api::post.post': ApiPostPost;
+      'api::product-development-service.product-development-service': ApiProductDevelopmentServiceProductDevelopmentService;
       'api::project.project': ApiProjectProject;
       'api::server-care.server-care': ApiServerCareServerCare;
+      'api::server-hardening-security-measure.server-hardening-security-measure': ApiServerHardeningSecurityMeasureServerHardeningSecurityMeasure;
+      'api::serverhardening.serverhardening': ApiServerhardeningServerhardening;
       'api::software-project-management.software-project-management': ApiSoftwareProjectManagementSoftwareProjectManagement;
       'api::support-coverage.support-coverage': ApiSupportCoverageSupportCoverage;
       'api::supported-control-panel.supported-control-panel': ApiSupportedControlPanelSupportedControlPanel;

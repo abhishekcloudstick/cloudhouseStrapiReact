@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_additional_security_measures",
+  "info": {
+    "displayName": "additionalSecurityMeasures"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

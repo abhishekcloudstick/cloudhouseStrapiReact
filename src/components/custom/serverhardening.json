@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_serverhardenings",
+  "info": {
+    "displayName": "serverhardening"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "serverhardenings",
+  "info": {
+    "singularName": "serverhardening",
+    "pluralName": "serverhardenings",
+    "displayName": "serverhardening"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "items": {
+      "type": "component",
+      "component": "custom.serverhardening",
+      "repeatable": true
+    }
+  }
+}

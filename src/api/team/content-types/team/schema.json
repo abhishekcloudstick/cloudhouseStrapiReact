@@ -26,6 +26,11 @@
     },
     "name": {
       "type": "string"
+    },
+    "seo": {
+      "type": "component",
+      "component": "custom.seo",
+      "repeatable": false
     }
   }
 }
