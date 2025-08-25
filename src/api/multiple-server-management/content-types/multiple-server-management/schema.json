@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "multiple_server_managements",
+  "info": {
+    "singularName": "multiple-server-management",
+    "pluralName": "multiple-server-managements",
+    "displayName": "multipleServerManagement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "period": {
+      "type": "string"
+    },
+    "serverLimit": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "component": "custom.features-server-management",
+      "repeatable": true
+    },
+    "limitations": {
+      "type": "component",
+      "component": "custom.limitations",
+      "repeatable": true
+    },
+    "popular": {
+      "type": "boolean"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "addOnPrice": {
+      "type": "string"
+    }
+  }
+}

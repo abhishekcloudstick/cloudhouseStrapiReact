@@ -785,6 +785,47 @@ export interface ApiMigrationServiceMigrationService
   };
 }
 
+export interface ApiMultipleServerManagementMultipleServerManagement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'multiple_server_managements';
+  info: {
+    displayName: 'multipleServerManagement';
+    pluralName: 'multiple-server-managements';
+    singularName: 'multiple-server-management';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    addOnPrice: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    features: Schema.Attribute.Component<
+      'custom.features-server-management',
+      true
+    >;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    limitations: Schema.Attribute.Component<'custom.limitations', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::multiple-server-management.multiple-server-management'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    period: Schema.Attribute.String;
+    popular: Schema.Attribute.Boolean;
+    price: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    serverLimit: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPostPost extends Struct.CollectionTypeSchema {
   collectionName: 'posts';
   info: {
@@ -1664,6 +1705,7 @@ declare module '@strapi/strapi' {
       'api::malware-removal-process.malware-removal-process': ApiMalwareRemovalProcessMalwareRemovalProcess;
       'api::migration-process.migration-process': ApiMigrationProcessMigrationProcess;
       'api::migration-service.migration-service': ApiMigrationServiceMigrationService;
+      'api::multiple-server-management.multiple-server-management': ApiMultipleServerManagementMultipleServerManagement;
       'api::post.post': ApiPostPost;
       'api::product-development-service.product-development-service': ApiProductDevelopmentServiceProductDevelopmentService;
       'api::project.project': ApiProjectProject;

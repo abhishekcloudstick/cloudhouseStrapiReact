@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_features_server_managements",
+  "info": {
+    "displayName": "features-server-management"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

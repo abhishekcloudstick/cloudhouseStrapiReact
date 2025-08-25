@@ -61,6 +61,16 @@ export interface CustomFeatures extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomFeaturesServerManagement extends Struct.ComponentSchema {
+  collectionName: 'components_custom_features_server_managements';
+  info: {
+    displayName: 'features-server-management';
+  };
+  attributes: {
+    item: Schema.Attribute.String;
+  };
+}
+
 export interface CustomItems extends Struct.ComponentSchema {
   collectionName: 'components_custom_items';
   info: {
@@ -68,6 +78,16 @@ export interface CustomItems extends Struct.ComponentSchema {
   };
   attributes: {
     item: Schema.Attribute.String;
+  };
+}
+
+export interface CustomLimitations extends Struct.ComponentSchema {
+  collectionName: 'components_custom_limitations';
+  info: {
+    displayName: 'limitations';
+  };
+  attributes: {
+    limits: Schema.Attribute.String;
   };
 }
 
@@ -146,7 +166,9 @@ declare module '@strapi/strapi' {
       'custom.devopsfeatures': CustomDevopsfeatures;
       'custom.erpfeatures': CustomErpfeatures;
       'custom.features': CustomFeatures;
+      'custom.features-server-management': CustomFeaturesServerManagement;
       'custom.items': CustomItems;
+      'custom.limitations': CustomLimitations;
       'custom.requirements': CustomRequirements;
       'custom.seo': CustomSeo;
       'custom.server-care-feature': CustomServerCareFeature;

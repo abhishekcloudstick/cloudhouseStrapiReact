@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_limitations",
+  "info": {
+    "displayName": "limitations"
+  },
+  "options": {},
+  "attributes": {
+    "limits": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
