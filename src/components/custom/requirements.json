@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_requirements",
+  "info": {
+    "displayName": "Requirements"
+  },
+  "options": {},
+  "attributes": {
+    "Requirements": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

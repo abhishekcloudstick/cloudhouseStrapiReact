@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_server_care_features",
+  "info": {
+    "displayName": "serverCareFeature"
+  },
+  "options": {},
+  "attributes": {
+    "features": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

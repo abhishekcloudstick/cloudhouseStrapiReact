@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_capabilities",
+  "info": {
+    "displayName": "capabilities"
+  },
+  "options": {},
+  "attributes": {
+    "txt": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

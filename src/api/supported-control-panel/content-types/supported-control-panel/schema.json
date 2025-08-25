@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supported_control_panels",
+  "info": {
+    "singularName": "supported-control-panel",
+    "pluralName": "supported-control-panels",
+    "displayName": "SupportedControlPanel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "txt": {
+      "type": "string"
+    }
+  }
+}

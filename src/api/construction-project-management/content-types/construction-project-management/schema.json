@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "construction_project_managements",
+  "info": {
+    "singularName": "construction-project-management",
+    "pluralName": "construction-project-managements",
+    "displayName": "ConstructionProjectManagement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

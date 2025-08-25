@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_advanced_reportings",
+  "info": {
+    "displayName": "advanced-reporting"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

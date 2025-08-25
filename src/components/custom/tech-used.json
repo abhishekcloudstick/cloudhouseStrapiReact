@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_tech_useds",
+  "info": {
+    "displayName": "techUsed"
+  },
+  "options": {},
+  "attributes": {
+    "technologies": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "software_project_managements",
+  "info": {
+    "singularName": "software-project-management",
+    "pluralName": "software-project-managements",
+    "displayName": "softwareProjectManagement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uid": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "capabilities": {
+      "type": "component",
+      "component": "custom.capabilities",
+      "repeatable": true
+    }
+  }
+}

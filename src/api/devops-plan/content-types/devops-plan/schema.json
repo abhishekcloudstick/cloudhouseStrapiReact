@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devops_plans",
+  "info": {
+    "singularName": "devops-plan",
+    "pluralName": "devops-plans",
+    "displayName": "DevopsPlan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "period": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "devopfeatures": {
+      "type": "component",
+      "component": "custom.devopsfeatures",
+      "repeatable": true
+    },
+    "popular": {
+      "type": "boolean"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

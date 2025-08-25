@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "construction_advanced_reportings",
+  "info": {
+    "singularName": "construction-advanced-reporting",
+    "pluralName": "construction-advanced-reportings",
+    "displayName": "constructionAdvancedReporting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "advancedItem": {
+      "type": "component",
+      "component": "custom.advanced-reporting",
+      "repeatable": true
+    }
+  }
+}

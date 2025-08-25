@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_erpfeatures",
+  "info": {
+    "displayName": "erpfeatures"
+  },
+  "options": {},
+  "attributes": {
+    "txt": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

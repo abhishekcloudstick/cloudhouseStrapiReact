@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devops_solutions",
+  "info": {
+    "singularName": "devops-solution",
+    "pluralName": "devops-solutions",
+    "displayName": "DevopsSolution"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

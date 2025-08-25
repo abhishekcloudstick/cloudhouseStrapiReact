@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "completed": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "component",
+      "component": "custom.tags",
+      "repeatable": true
+    },
+    "categories": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "ChallengeDescription": {
+      "type": "text"
+    },
+    "ourSolution": {
+      "type": "text"
+    },
+    "theResult": {
+      "type": "text"
+    },
+    "client": {
+      "type": "string"
+    },
+    "Timeline": {
+      "type": "string"
+    },
+    "tech": {
+      "type": "component",
+      "component": "custom.tech-used",
+      "repeatable": true
+    },
+    "ProjectHighlightIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "EfficientTimeline": {
+      "type": "text"
+    },
+    "AdvancedTechnologies": {
+      "type": "text"
+    },
+    "MeasurableResults": {
+      "type": "text"
+    },
+    "Category": {
+      "type": "string"
+    }
+  }
+}

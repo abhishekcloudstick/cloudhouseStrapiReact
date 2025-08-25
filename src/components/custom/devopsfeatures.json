@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_devopsfeatures",
+  "info": {
+    "displayName": "Devopsfeatures"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "server_cares",
+  "info": {
+    "singularName": "server-care",
+    "pluralName": "server-cares",
+    "displayName": "ServerCare"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "period": {
+      "type": "string"
+    },
+    "Scare": {
+      "type": "component",
+      "component": "custom.server-care-feature",
+      "repeatable": true
+    },
+    "popular": {
+      "type": "boolean"
+    }
+  }
+}

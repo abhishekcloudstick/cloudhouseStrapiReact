@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "support_coverages",
+  "info": {
+    "singularName": "support-coverage",
+    "pluralName": "support-coverages",
+    "displayName": "supportCoverage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "items": {
+      "type": "component",
+      "component": "custom.items",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "f_and_qs",
+  "info": {
+    "singularName": "f-and-q",
+    "pluralName": "f-and-qs",
+    "displayName": "Q and A"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
