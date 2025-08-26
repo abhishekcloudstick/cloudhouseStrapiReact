@@ -31,6 +31,16 @@ export interface CustomCapabilities extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomCrmFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_custom_crm_features';
+  info: {
+    displayName: 'crm-features';
+  };
+  attributes: {
+    item: Schema.Attribute.String;
+  };
+}
+
 export interface CustomDevopsfeatures extends Struct.ComponentSchema {
   collectionName: 'components_custom_devopsfeatures';
   info: {
@@ -163,6 +173,7 @@ declare module '@strapi/strapi' {
       'custom.additional-security-measures': CustomAdditionalSecurityMeasures;
       'custom.advanced-reporting': CustomAdvancedReporting;
       'custom.capabilities': CustomCapabilities;
+      'custom.crm-features': CustomCrmFeatures;
       'custom.devopsfeatures': CustomDevopsfeatures;
       'custom.erpfeatures': CustomErpfeatures;
       'custom.features': CustomFeatures;

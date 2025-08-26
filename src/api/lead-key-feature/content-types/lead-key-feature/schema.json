@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lead_key_features",
+  "info": {
+    "singularName": "lead-key-feature",
+    "pluralName": "lead-key-features",
+    "displayName": "lead-Key-Feature"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

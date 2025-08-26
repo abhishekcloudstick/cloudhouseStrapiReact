@@ -410,6 +410,37 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAnalyticsReportingAnalyticsReporting
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'analytics_reportings';
+  info: {
+    displayName: 'AnalyticsReporting';
+    pluralName: 'analytics-reportings';
+    singularName: 'analytics-reporting';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::analytics-reporting.analytics-reporting'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCelebrationCelebration extends Struct.CollectionTypeSchema {
   collectionName: 'celebrations';
   info: {
@@ -491,6 +522,39 @@ export interface ApiConstructionProjectManagementConstructionProjectManagement
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::construction-project-management.construction-project-management'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCrmModuleCrmModule extends Struct.CollectionTypeSchema {
+  collectionName: 'crm_modules';
+  info: {
+    displayName: 'CRM-Module';
+    pluralName: 'crm-modules';
+    singularName: 'crm-module';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'custom.crm-features', true>;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    lead: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::crm-module.crm-module'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -656,6 +720,67 @@ export interface ApiHiringHiring extends Struct.CollectionTypeSchema {
     Requirement: Schema.Attribute.Component<'custom.requirements', true>;
     title: Schema.Attribute.String;
     type: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLeadKeyFeatureLeadKeyFeature
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'lead_key_features';
+  info: {
+    displayName: 'lead-Key-Feature';
+    pluralName: 'lead-key-features';
+    singularName: 'lead-key-feature';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::lead-key-feature.lead-key-feature'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMSmQandAMSmQandA extends Struct.CollectionTypeSchema {
+  collectionName: 'm_sm_qand_as';
+  info: {
+    displayName: 'mSm-QandA';
+    pluralName: 'm-sm-qand-as';
+    singularName: 'm-sm-qand-a';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::m-sm-qand-a.m-sm-qand-a'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    question: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -936,6 +1061,37 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSalesManagementSalesManagement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'sales_managements';
+  info: {
+    displayName: 'SalesManagement';
+    pluralName: 'sales-managements';
+    singularName: 'sales-management';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::sales-management.sales-management'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServerCareServerCare extends Struct.CollectionTypeSchema {
   collectionName: 'server_cares';
   info: {
@@ -1085,6 +1241,37 @@ export interface ApiSupportCoverageSupportCoverage
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::support-coverage.support-coverage'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSupportManagementSupportManagement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'support_managements';
+  info: {
+    displayName: 'SupportManagement';
+    pluralName: 'support-managements';
+    singularName: 'support-management';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::support-management.support-management'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1693,14 +1880,18 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::analytics-reporting.analytics-reporting': ApiAnalyticsReportingAnalyticsReporting;
       'api::celebration.celebration': ApiCelebrationCelebration;
       'api::construction-advanced-reporting.construction-advanced-reporting': ApiConstructionAdvancedReportingConstructionAdvancedReporting;
       'api::construction-project-management.construction-project-management': ApiConstructionProjectManagementConstructionProjectManagement;
+      'api::crm-module.crm-module': ApiCrmModuleCrmModule;
       'api::devops-plan.devops-plan': ApiDevopsPlanDevopsPlan;
       'api::devops-solution.devops-solution': ApiDevopsSolutionDevopsSolution;
       'api::erp-module.erp-module': ApiErpModuleErpModule;
       'api::f-and-q.f-and-q': ApiFAndQFAndQ;
       'api::hiring.hiring': ApiHiringHiring;
+      'api::lead-key-feature.lead-key-feature': ApiLeadKeyFeatureLeadKeyFeature;
+      'api::m-sm-qand-a.m-sm-qand-a': ApiMSmQandAMSmQandA;
       'api::malware-qand-a.malware-qand-a': ApiMalwareQandAMalwareQandA;
       'api::malware-removal-process.malware-removal-process': ApiMalwareRemovalProcessMalwareRemovalProcess;
       'api::migration-process.migration-process': ApiMigrationProcessMigrationProcess;
@@ -1709,11 +1900,13 @@ declare module '@strapi/strapi' {
       'api::post.post': ApiPostPost;
       'api::product-development-service.product-development-service': ApiProductDevelopmentServiceProductDevelopmentService;
       'api::project.project': ApiProjectProject;
+      'api::sales-management.sales-management': ApiSalesManagementSalesManagement;
       'api::server-care.server-care': ApiServerCareServerCare;
       'api::server-hardening-security-measure.server-hardening-security-measure': ApiServerHardeningSecurityMeasureServerHardeningSecurityMeasure;
       'api::serverhardening.serverhardening': ApiServerhardeningServerhardening;
       'api::software-project-management.software-project-management': ApiSoftwareProjectManagementSoftwareProjectManagement;
       'api::support-coverage.support-coverage': ApiSupportCoverageSupportCoverage;
+      'api::support-management.support-management': ApiSupportManagementSupportManagement;
       'api::supported-control-panel.supported-control-panel': ApiSupportedControlPanelSupportedControlPanel;
       'api::team.team': ApiTeamTeam;
       'api::typesof-malware.typesof-malware': ApiTypesofMalwareTypesofMalware;

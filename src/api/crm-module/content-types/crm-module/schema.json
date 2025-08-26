@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "crm_modules",
+  "info": {
+    "singularName": "crm-module",
+    "pluralName": "crm-modules",
+    "displayName": "CRM-Module"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lead": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "features": {
+      "type": "component",
+      "component": "custom.crm-features",
+      "repeatable": true
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_crm_features",
+  "info": {
+    "displayName": "crm-features"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

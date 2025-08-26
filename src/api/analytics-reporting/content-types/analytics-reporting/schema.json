@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analytics_reportings",
+  "info": {
+    "singularName": "analytics-reporting",
+    "pluralName": "analytics-reportings",
+    "displayName": "AnalyticsReporting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

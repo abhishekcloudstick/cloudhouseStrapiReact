@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "m_sm_qand_as",
+  "info": {
+    "singularName": "m-sm-qand-a",
+    "pluralName": "m-sm-qand-as",
+    "displayName": "mSm-QandA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    },
+    "Img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
