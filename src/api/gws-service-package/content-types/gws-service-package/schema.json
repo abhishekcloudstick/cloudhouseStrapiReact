@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gws_service_packages",
+  "info": {
+    "singularName": "gws-service-package",
+    "pluralName": "gws-service-packages",
+    "displayName": "gws-servicePackage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "string"
+    },
+    "delivery": {
+      "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "component": "custom.gws-features",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "string"
+    },
+    "ctaLink": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "boolean"
+    },
+    "pricing": {
+      "type": "component",
+      "component": "custom.pricing",
+      "repeatable": true
+    }
+  }
+}

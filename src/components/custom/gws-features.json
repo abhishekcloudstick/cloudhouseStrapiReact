@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_gws_features",
+  "info": {
+    "displayName": "Gws-features"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

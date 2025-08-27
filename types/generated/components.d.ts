@@ -81,6 +81,16 @@ export interface CustomFeaturesServerManagement extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomGwsFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_custom_gws_features';
+  info: {
+    displayName: 'Gws-features';
+  };
+  attributes: {
+    item: Schema.Attribute.String;
+  };
+}
+
 export interface CustomItems extends Struct.ComponentSchema {
   collectionName: 'components_custom_items';
   info: {
@@ -98,6 +108,17 @@ export interface CustomLimitations extends Struct.ComponentSchema {
   };
   attributes: {
     limits: Schema.Attribute.String;
+  };
+}
+
+export interface CustomPricing extends Struct.ComponentSchema {
+  collectionName: 'components_custom_pricings';
+  info: {
+    displayName: 'pricing';
+  };
+  attributes: {
+    pricing: Schema.Attribute.String;
+    users: Schema.Attribute.String;
   };
 }
 
@@ -167,6 +188,16 @@ export interface CustomTechUsed extends Struct.ComponentSchema {
   };
 }
 
+export interface CustomTechnicalSuppportfeature extends Struct.ComponentSchema {
+  collectionName: 'components_custom_technical_suppportfeatures';
+  info: {
+    displayName: 'TechnicalSuppportfeature';
+  };
+  attributes: {
+    item: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -178,14 +209,17 @@ declare module '@strapi/strapi' {
       'custom.erpfeatures': CustomErpfeatures;
       'custom.features': CustomFeatures;
       'custom.features-server-management': CustomFeaturesServerManagement;
+      'custom.gws-features': CustomGwsFeatures;
       'custom.items': CustomItems;
       'custom.limitations': CustomLimitations;
+      'custom.pricing': CustomPricing;
       'custom.requirements': CustomRequirements;
       'custom.seo': CustomSeo;
       'custom.server-care-feature': CustomServerCareFeature;
       'custom.serverhardening': CustomServerhardening;
       'custom.tags': CustomTags;
       'custom.tech-used': CustomTechUsed;
+      'custom.technical-suppportfeature': CustomTechnicalSuppportfeature;
     }
   }
 }

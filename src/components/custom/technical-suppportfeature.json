@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_custom_technical_suppportfeatures",
+  "info": {
+    "displayName": "TechnicalSuppportfeature"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

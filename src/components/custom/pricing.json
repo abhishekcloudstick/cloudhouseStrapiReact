@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_custom_pricings",
+  "info": {
+    "displayName": "pricing"
+  },
+  "options": {},
+  "attributes": {
+    "pricing": {
+      "type": "string"
+    },
+    "users": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

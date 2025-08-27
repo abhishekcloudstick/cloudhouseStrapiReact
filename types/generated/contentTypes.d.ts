@@ -692,6 +692,44 @@ export interface ApiFAndQFAndQ extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiGwsServicePackageGwsServicePackage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'gws_service_packages';
+  info: {
+    displayName: 'gws-servicePackage';
+    pluralName: 'gws-service-packages';
+    singularName: 'gws-service-package';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    cta: Schema.Attribute.String;
+    ctaLink: Schema.Attribute.String;
+    delivery: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    features: Schema.Attribute.Component<'custom.gws-features', true>;
+    highlight: Schema.Attribute.Boolean;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::gws-service-package.gws-service-package'
+    > &
+      Schema.Attribute.Private;
+    price: Schema.Attribute.String;
+    pricing: Schema.Attribute.Component<'custom.pricing', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHiringHiring extends Struct.CollectionTypeSchema {
   collectionName: 'hirings';
   info: {
@@ -751,6 +789,35 @@ export interface ApiLeadKeyFeatureLeadKeyFeature
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLogoItemLogoItem extends Struct.CollectionTypeSchema {
+  collectionName: 'logo_items';
+  info: {
+    displayName: 'LogoItem';
+    pluralName: 'logo-items';
+    singularName: 'logo-item';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    imageUrl: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::logo-item.logo-item'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1311,6 +1378,37 @@ export interface ApiSupportedControlPanelSupportedControlPanel
   };
 }
 
+export interface ApiTaskManagementTaskManagement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'task_managements';
+  info: {
+    displayName: 'task-management';
+    pluralName: 'task-managements';
+    singularName: 'task-management';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::task-management.task-management'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
   collectionName: 'teams';
   info: {
@@ -1333,6 +1431,43 @@ export interface ApiTeamTeam extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String;
     seo: Schema.Attribute.Component<'custom.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTechnicalSupportTechnicalSupport
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'technical_supports';
+  info: {
+    displayName: 'technicalSupport';
+    pluralName: 'technical-supports';
+    singularName: 'technical-support';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String;
+    features: Schema.Attribute.Component<
+      'custom.technical-suppportfeature',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::technical-support.technical-support'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    price: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    recommended: Schema.Attribute.Boolean;
+    servers: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1364,6 +1499,69 @@ export interface ApiTypesofMalwareTypesofMalware
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWdThrissurDevelopmentProcessWdThrissurDevelopmentProcess
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'wd_thrissur_development_processes';
+  info: {
+    displayName: 'WDThrissur- Development Process';
+    pluralName: 'wd-thrissur-development-processes';
+    singularName: 'wd-thrissur-development-process';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::wd-thrissur-development-process.wd-thrissur-development-process'
+    > &
+      Schema.Attribute.Private;
+    number: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWdThrissurServiceFeatureWdThrissurServiceFeature
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'wd_thrissur_service_features';
+  info: {
+    displayName: 'WDThrissur-serviceFeature';
+    pluralName: 'wd-thrissur-service-features';
+    singularName: 'wd-thrissur-service-feature';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::wd-thrissur-service-feature.wd-thrissur-service-feature'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1889,8 +2087,10 @@ declare module '@strapi/strapi' {
       'api::devops-solution.devops-solution': ApiDevopsSolutionDevopsSolution;
       'api::erp-module.erp-module': ApiErpModuleErpModule;
       'api::f-and-q.f-and-q': ApiFAndQFAndQ;
+      'api::gws-service-package.gws-service-package': ApiGwsServicePackageGwsServicePackage;
       'api::hiring.hiring': ApiHiringHiring;
       'api::lead-key-feature.lead-key-feature': ApiLeadKeyFeatureLeadKeyFeature;
+      'api::logo-item.logo-item': ApiLogoItemLogoItem;
       'api::m-sm-qand-a.m-sm-qand-a': ApiMSmQandAMSmQandA;
       'api::malware-qand-a.malware-qand-a': ApiMalwareQandAMalwareQandA;
       'api::malware-removal-process.malware-removal-process': ApiMalwareRemovalProcessMalwareRemovalProcess;
@@ -1908,8 +2108,12 @@ declare module '@strapi/strapi' {
       'api::support-coverage.support-coverage': ApiSupportCoverageSupportCoverage;
       'api::support-management.support-management': ApiSupportManagementSupportManagement;
       'api::supported-control-panel.supported-control-panel': ApiSupportedControlPanelSupportedControlPanel;
+      'api::task-management.task-management': ApiTaskManagementTaskManagement;
       'api::team.team': ApiTeamTeam;
+      'api::technical-support.technical-support': ApiTechnicalSupportTechnicalSupport;
       'api::typesof-malware.typesof-malware': ApiTypesofMalwareTypesofMalware;
+      'api::wd-thrissur-development-process.wd-thrissur-development-process': ApiWdThrissurDevelopmentProcessWdThrissurDevelopmentProcess;
+      'api::wd-thrissur-service-feature.wd-thrissur-service-feature': ApiWdThrissurServiceFeatureWdThrissurServiceFeature;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
